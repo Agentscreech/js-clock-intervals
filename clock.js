@@ -10,8 +10,8 @@ function go(){
     // seconds++;
     currentTime = new Date();
     secondRotation(currentTime.getSeconds());
-    minuteRotation(currentTime.getMinutes());
-    hourRotation(currentTime.getHours());
+    minuteRotation(currentTime.getMinutes()+(currentTime.getSeconds()/60));
+    hourRotation(currentTime.getHours()+(currentTime.getMinutes()/60+(currentTime.getSeconds()/60/60)));
 }
 //  if secondHand = 60, set it to 0 then increase minute hand, if minute hand = 60, increase hour hand.
 // rotation logic - 1s = 6 degrees
